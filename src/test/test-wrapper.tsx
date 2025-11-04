@@ -7,7 +7,8 @@ const createTestQueryClient = () =>
         defaultOptions: {
             queries: {
                 retry: false,
-                staleTime: Infinity,
+                staleTime: 0, // Disable caching completely
+                gcTime: 0, // Garbage collect immediately
             },
         },
     });
