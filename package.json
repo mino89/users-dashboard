@@ -33,6 +33,7 @@
     "eslint-plugin-react-refresh": "^0.4.22",
     "git-cliff": "^2.10.1",
     "globals": "^16.4.0",
+    "jsdom": "^27.1.0",
     "prettier": "3.6.2",
     "release-it": "^19.0.5",
     "typescript": "~5.9.3",
