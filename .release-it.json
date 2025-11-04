@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "after:bump": "./changelog.sh"
+    "after:bump": "./changelog.sh && pnpm run sync:lockfile"
   },
   "github": {
     "releaseNotes": "./changelog.sh stdout"
