@@ -14,6 +14,7 @@
     "sync:lockfile": "npm i --package-lock-only"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.6",
     "@tanstack/react-router": "^1.134.9",
     "@tanstack/react-router-devtools": "^1.134.9",
     "react": "^19.1.1",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@tanstack/eslint-plugin-query": "^5.91.2",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
