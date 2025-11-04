@@ -3,3 +3,4 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Project scaffolding
+- *(vite-config)* Removed tanstack router plugin
