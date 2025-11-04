@@ -11,15 +11,26 @@ import { fetchData } from "@/core/utils/fetch-data";
  */
 export const useApiClient = <T>(props: QueryClientProps) => {
   const apiUrl: string = import.meta.env.VITE_API_URL;
+  const { path, queryParams, queryKeys, options } = props;
+
   let composedUrl = apiUrl;
-  if (props.path) {
-    composedUrl = [apiUrl].concat(...props.path).join("/");
+
+  if (path) {
+    composedUrl = [apiUrl].concat(...path).join("/");
+  }
+
+  if (queryParams) {
+    const queryString = `?${Object.entries(queryParams)
+      .map((q) => q.join("="))
+      .join("&")}`;
+
+    composedUrl = composedUrl.concat(queryString);
   }
 
   const queryClient = useQueryClient();
   const { data, isLoading, isError, error } = useQuery<T>({
-    queryKey: [...props.queryKeys, composedUrl, props.options],
-    queryFn: async () => fetchData(composedUrl, props.options),
+    queryKey: [...queryKeys, composedUrl, options],
+    queryFn: async () => fetchData(composedUrl, options),
   });
 
   return {

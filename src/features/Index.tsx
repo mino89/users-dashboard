@@ -9,6 +9,9 @@ export function Index() {
             <QueryLayout<UsersList>
                 queryClientOptions={{
                     queryKeys: ["user"],
+                    queryParams: {
+                        limit: 0,
+                    },
                 }}
             >
                 {(data) => <Json obj={data.users} />}
