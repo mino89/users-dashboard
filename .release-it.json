@@ -1,0 +1,8 @@
+{
+  "hooks": {
+    "after:bump": "./changelog.sh"
+  },
+  "github": {
+    "releaseNotes": "./changelog.sh stdout"
+  }
+}
