@@ -1,5 +1,5 @@
 import { useApiClient } from "@/core/hooks/api-client";
-import type { QueryLayoutProps } from "./model";
+import type { QueryLayoutProps } from "./types";
 
 export default function QueryLayout<T>(props: QueryLayoutProps<T>) {
     const { data, isLoading, isError, error } = useApiClient<T>(

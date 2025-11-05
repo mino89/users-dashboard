@@ -4,7 +4,7 @@ import {
   createRouter,
   RootRoute,
 } from "@tanstack/react-router";
-import type { RouteConfig, RouterConfig } from "./model/config";
+import type { RouteConfig, RouterConfig } from "./types/config";
 import { routes } from "@/routes";
 
 declare module "@tanstack/react-router" {

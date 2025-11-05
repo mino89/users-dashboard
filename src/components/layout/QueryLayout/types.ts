@@ -1,4 +1,4 @@
-import type { QueryClientProps } from "@/core/model/api-client";
+import type { QueryClientProps } from "@/core/types/api-client";
 
 export type QueryLayoutProps<T> = {
   queryClientOptions: QueryClientProps;

@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import { composeChildRoutes, initializeRouter } from "@/core/router";
 import { Router, createRootRoute } from "@tanstack/react-router";
-import type { RouterConfig } from "./model/config";
+import type { RouterConfig } from "./types/config";
 
 const mockRouteConfig: RouterConfig = {
   rootRoute: {

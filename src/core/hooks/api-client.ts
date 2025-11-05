@@ -1,7 +1,7 @@
 //scaffold a react hook
 
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import type { QueryClientProps } from "@/core/model/api-client";
+import type { QueryClientProps } from "@/core/types/api-client";
 import { fetchData } from "@/core/utils/fetch-data";
 
 /**
