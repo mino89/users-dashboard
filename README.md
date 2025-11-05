@@ -53,11 +53,11 @@ src/
 ├── core/            # Core functionalities (API clients, hooks, models)
 ├── features/        # Feature-specific components and pages
 ├── components/      # Reusable UI components
-├── test/            # Test utilities and mocks
 ├── types/           # TypeScript type definitions
 ├── index.css        # Global styles
 ├── main.tsx         # Application entry point
 └── routes.ts        # Application routes configuration
+├── test/            # Test utilities and mocks
 ```
 
 ## Usage

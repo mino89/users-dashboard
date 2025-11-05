@@ -1,6 +1,7 @@
 import { afterAll, describe, expect, it, vi } from "vitest";
 import { fetchData } from "./fetch-data";
-import { MOCK_DATA } from "@/test/utils";
+import { MOCK_DATA } from "@test/utils";
+
 const mockEndpoint = "https://test.co";
 describe("fetchData", () => {
   it("must return an http response ", async () => {

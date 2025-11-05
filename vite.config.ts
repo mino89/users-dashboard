@@ -8,7 +8,7 @@ export default defineConfig({
   envDir: "./env",
   test: {
     environment: "jsdom",
-    setupFiles: ["./src/test/setup.ts"],
+    setupFiles: ["./test/setup.ts"],
     isolate: true,
     pool: "forks",
   },
