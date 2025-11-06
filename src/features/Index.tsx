@@ -1,5 +1,7 @@
 import QueryLayout from "@components/layout/QueryLayout";
 import Filters from "@components/ui/Filters";
+import List from "@components/ui/List";
+import ListItem from "@components/ui/ListItem";
 import { FILTERS_CONFIG } from "@config/filters";
 import { useFiltersResults } from "@hooks/useFilters";
 import type { UsersList, User } from "@type/data/user";
@@ -23,15 +25,20 @@ export function Index() {
                     },
                 }}
             >
-                {(data) =>
-                    filteredData(data.users).map((user: User) => (
-                        <div key={user.id}>
-                            <p>
-                                {user.firstName} {user.lastName} - {user.role}
-                            </p>
-                        </div>
-                    ))
-                }
+                {(data) => (
+                    <List<User> items={filteredData(data.users)}>
+                        {(user) => (
+                            <ListItem
+                                key={user.id}
+                                title={`${user.firstName} ${user.lastName}`}
+                                subtitle={user.role}
+                                link={`/${user.id}`}
+                            >
+                                {user.email}
+                            </ListItem>
+                        )}
+                    </List>
+                )}
             </QueryLayout>
         </>
     );
