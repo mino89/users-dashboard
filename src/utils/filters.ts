@@ -14,7 +14,13 @@ export function filterStartingValues(
   }, {});
 }
 
-export const filterData = <T>(data: T, filters: Record<string, string>) => {
+/**
+ *
+ * @param data {T} The data to be filtered.
+ * @param filters {FilterValues} The active filters.
+ * @returns {T} The filtered data.
+ */
+export const filterData = <T>(data: T, filters: FilterValues) => {
   if (!Array.isArray(data) || !filters) {
     return data;
   }
