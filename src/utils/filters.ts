@@ -1,3 +1,19 @@
+import type { FiltersProps, FilterValues } from "@type/core/filters";
+
+/**
+ *
+ * @param filters {FiltersProps["filters"]}
+ * @returns {FileterValues} An object containing the starting values for each filter.
+ */
+export function filterStartingValues(
+  filters: FiltersProps["filters"],
+): FilterValues {
+  return filters?.reduce((acc: FilterValues, filter) => {
+    acc[filter.key] = filter.value || "";
+    return acc;
+  }, {});
+}
+
 export const filterData = <T>(data: T, filters: Record<string, string>) => {
   if (!Array.isArray(data) || !filters) {
     return data;

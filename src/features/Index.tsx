@@ -1,9 +1,8 @@
-import QueryLayout from "@/components/layout/QueryLayout/QueryLayout";
-import Filters from "@/components/shared/Filters/Filters";
-import type { UsersList } from "@/types/user";
-import { FILTERS_CONFIG } from "./config";
-
-import { useFiltersResults } from "@/core/hooks/filters";
+import QueryLayout from "@components/layout/QueryLayout";
+import Filters from "@components/ui/Filters";
+import { FILTERS_CONFIG } from "@config/filters";
+import { useFiltersResults } from "@hooks/useFilters";
+import type { UsersList, User } from "@type/data/user";
 
 export function Index() {
     const { setFilters, filterdData } = useFiltersResults<UsersList["users"]>();
@@ -24,7 +23,7 @@ export function Index() {
                 }}
             >
                 {(data) =>
-                    filterdData(data.users).map((user) => (
+                    filterdData(data.users).map((user: User) => (
                         <div key={user.id}>
                             <p>
                                 {user.firstName} {user.lastName} - {user.role}

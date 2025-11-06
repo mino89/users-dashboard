@@ -1,4 +1,4 @@
-import type { FiltersConfig } from "@/components/shared/Filters/types";
+import type { FiltersConfig } from "@type/core/filters";
 
 export const FILTERS_CONFIG: FiltersConfig[] = [
   {

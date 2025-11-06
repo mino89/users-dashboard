@@ -1,7 +1,7 @@
-import QueryLayout from "@/components/layout/QueryLayout/QueryLayout";
-import Json from "@/components/utils/Json/Json";
-import type { User } from "@/types/user";
+import QueryLayout from "@components/layout/QueryLayout";
+import Json from "@components/utils/Json";
 import { getRouteApi } from "@tanstack/react-router";
+import type { User } from "@type/data/user";
 
 const routeApi = getRouteApi("/$id");
 

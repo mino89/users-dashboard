@@ -1,4 +1,4 @@
-import type { SelectProps } from "../types/input";
+import type { SelectProps } from "@type/core/input";
 
 export default function Select(props: SelectProps) {
     const { options, value, onChange, ariaLabel } = props;

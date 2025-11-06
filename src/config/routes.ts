@@ -1,7 +1,7 @@
-import { Root } from "@/features/Root";
-import { Detail } from "@/features/Detail";
-import { Index } from "@/features/Index";
-import type { RouterConfig } from "./core/types/config";
+import { Detail } from "@features/Detail";
+import { Index } from "@features/Index";
+import { Root } from "@features/Root";
+import type { RouterConfig } from "@type/core/routeConfig";
 
 export const routes: RouterConfig = {
   rootRoute: {

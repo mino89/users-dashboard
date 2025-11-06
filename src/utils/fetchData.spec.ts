@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, it, vi } from "vitest";
-import { fetchData } from "./fetch-data";
+import { fetchData } from "./fetchData";
 import { MOCK_DATA } from "@test/utils";
 
 const mockEndpoint = "https://test.co";

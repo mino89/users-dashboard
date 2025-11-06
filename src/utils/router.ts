@@ -1,11 +1,11 @@
+import { routes } from "@config/routes";
 import {
   createRootRoute,
   createRoute,
   createRouter,
   RootRoute,
 } from "@tanstack/react-router";
-import type { RouteConfig, RouterConfig } from "./types/config";
-import { routes } from "@/routes";
+import type { RouterConfig, RouteConfig } from "@type/core/routeConfig";
 
 declare module "@tanstack/react-router" {
   interface Register {

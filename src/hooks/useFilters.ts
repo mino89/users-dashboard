@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
-import { filterData } from "../utils/data";
-import { useDebounce } from "./debounce";
+import { useDebounce } from "./useDebounce";
+import { filterData } from "@utils/filters";
 
 export function useFiltersResults<T>() {
   const [filters, setFilters] = useState<Record<string, string>>();

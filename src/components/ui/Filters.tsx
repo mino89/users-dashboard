@@ -1,8 +1,8 @@
-import { useFilters } from "@/core/hooks/filters";
-import InputText from "../Input/InputText";
-import Select from "../Input/Select";
-import type { FiltersProps, FilterValues } from "./types";
-import { filterStartingValues } from "./utils";
+import { useFilters } from "@hooks/useFilters";
+import type { FiltersProps, FilterValues } from "@type/core/filters";
+import { filterStartingValues } from "@utils/filters";
+import InputText from "./InputText";
+import Select from "./Select";
 
 export default function Filters(props: FiltersProps) {
     const { filters, onFiltersChange } = props;

@@ -1,4 +1,4 @@
-import type { SelectProps, InputTextProps } from "../types/input";
+import type { SelectProps, InputTextProps } from "./input";
 
 export type FiltersConfig = {
   key: string;
