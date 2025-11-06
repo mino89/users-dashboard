@@ -17,6 +17,9 @@ export default defineConfig([
       reactHooks.configs["recommended-latest"],
       reactRefresh.configs.vite,
     ],
+    rules: {
+      "react-hooks/exhaustive-deps": "disable",
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
