@@ -26,4 +26,22 @@ export const MOCK_DATA = {
     name: "John doe",
     role: "admin",
   },
+  filtersConfig: [
+    {
+      key: "name",
+      ariaLabel: "Filter by name",
+      type: "text",
+      value: "",
+    },
+    {
+      key: "role",
+      ariaLabel: "Filter by role",
+      type: "text",
+      value: "",
+    },
+  ],
+  filters: {
+    name: "John",
+    role: "editor",
+  },
 };

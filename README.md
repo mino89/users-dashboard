@@ -49,22 +49,22 @@ The project is structured as follows:
 
 ```
 src/
-├── assets/          # Static assets like images and styles
-├── core/            # Core functionalities (API clients, hooks, models)
-├── features/        # Feature-specific components and pages
-├── components/      # Reusable UI components
-├── test/            # Test utilities and mocks
-├── types/           # TypeScript type definitions
-├── index.css        # Global styles
-├── main.tsx         # Application entry point
-└── routes.ts        # Application routes configuration
+├── assets/            # Static assets (images, fonts, etc.)
+├── components/        # Reusable UI components
+├── config/            # Configuration files (e.g., routes, filters)
+├── features/          # Feature-specific components and logic
+├── hooks/             # Custom React hooks
+├── styles/            # Global styles and CSS files
+├── types/             # TypeScript type definitions
+├── utils/             # Utility functions and helpers
+├── main.tsx           # Application entry point
 ```
 
 ## Usage
 
 ### Routes configuration
 
-The routes are defined in `src/routes.ts`. You can add, remove, or modify routes in this file as needed. This project uses [@tanstack/react-router](https://tanstack.com/router/v1) for routing. All configurations respect the library's conventions.
+The routes are defined in `src/config/routes.ts`. You can add, remove, or modify routes in this file as needed. This project uses [@tanstack/react-router](https://tanstack.com/router/v1) for routing. All configurations respect the library's conventions.
 
 ```ts
 export const routes: RouterConfig = {

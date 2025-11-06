@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
-import { useApiClient } from "./api-client";
-import { TestWrapper } from "@/test/test-wrapper";
-import { MOCK_DATA } from "@/test/utils";
+import { useApiClient } from "./useApiClient";
+import { TestWrapper } from "@test/test-wrapper";
+import { MOCK_DATA } from "@test/utils";
 
 const hook = () =>
   renderHook(

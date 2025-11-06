@@ -8,13 +8,20 @@ export default defineConfig({
   envDir: "./env",
   test: {
     environment: "jsdom",
-    setupFiles: ["./src/test/setup.ts"],
+    setupFiles: ["./test/setup.ts"],
     isolate: true,
     pool: "forks",
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@config": path.resolve(__dirname, "./src/config"),
+      "@features": path.resolve(__dirname, "./src/features"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
+      "@styles": path.resolve(__dirname, "./src/styles"),
+      "@type": path.resolve(__dirname, "./src/types"),
+      "@utils": path.resolve(__dirname, "./src/utils"),
       "@test": path.resolve(__dirname, "./test"),
     },
   },

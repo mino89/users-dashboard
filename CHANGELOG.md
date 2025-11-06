@@ -1,3 +1,35 @@
+## [0.3.0] - 2025-11-06
+
+### 🚀 Features
+
+- Input text creation
+- Select input creation
+- Filters component creation
+- Filters component and hooks implementation
+
+### 🚜 Refactor
+
+- Fix type redoundance on useFilters
+- *(useFilters)* Fixed  typo in function name
+- Removed unused dependecy in useFilters hook
+
+### 📚 Documentation
+
+- Documented filterData function
+- UseDebounce hook
+- UseFilters hook
+
+### 🧪 Testing
+
+- Filter utils
+- UseDebounce hook
+- UseFilters hook
+
+### ⚙️ Miscellaneous Tasks
+
+- Moved test in root folder
+- Renamed model to types for consistency
+- Eslint config deactivated `react-hooks/exhaustive-deps`
 ## [0.2.0] - 2025-11-04
 
 ### 🚀 Features
@@ -29,16 +61,17 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Project scaffolding
-- *(vite-config)* Removed tanstack router plugin
+- _(vite-config)_ Removed tanstack router plugin
 - Removed unused package
 - Configured environment
 - Package.json syncronization on release
 - Added testing-library
 - Added jsom dependency
 - Configured alias for tests folder
+
 ## [0.1.0] - 2025-11-04
 
 ### ⚙️ Miscellaneous Tasks
 
 - Project scaffolding
-- *(vite-config)* Removed tanstack router plugin
+- _(vite-config)_ Removed tanstack router plugin
