@@ -1,3 +1,13 @@
+## [0.4.0] - 2025-11-06
+
+### 🚀 Features
+
+- List item implementation
+- Implemented list component
+
+### 🧪 Testing
+
+- ListItem
 ## [0.3.1] - 2025-11-06
 
 ### ⚙️ Miscellaneous Tasks
