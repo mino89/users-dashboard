@@ -3,6 +3,10 @@ import { useDebounce } from "./useDebounce";
 import { filterData } from "@utils/filters";
 import type { FilterValues } from "@type/core/filters";
 
+/**
+ * Hook to manage filter state and provide filtered data.
+ * @returns An object containing setFilters function and filteredData function.
+ */
 export function useFiltersResults<T>() {
   const [filters, setFilters] = useState<FilterValues>();
 
@@ -14,6 +18,12 @@ export function useFiltersResults<T>() {
   return { setFilters, filteredData };
 }
 
+/**
+ * Hook to manage individual filter values and provide update and reset functions.
+ * @param initalValues - The initial filter values.
+ * @param cb - Callback function to be called on filter value changes.
+ * @returns An object containing filterValues, updateFilters function, and resetFilters function.
+ */
 export function useFilters<T>(initalValues: T, cb: (values: T) => void) {
   const [startingValues] = useState<T>(initalValues);
   const [filterValues, setFilterValues] = useState<T>(startingValues);
