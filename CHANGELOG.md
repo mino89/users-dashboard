@@ -1,3 +1,8 @@
+## [0.3.1] - 2025-11-06
+
+### ⚙️ Miscellaneous Tasks
+
+- Implemented action for ci
 ## [0.3.0] - 2025-11-06
 
 ### 🚀 Features
