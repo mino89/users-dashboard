@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
 import { filterData } from "@utils/filters";
 import type { FilterValues } from "@type/core/filters";
@@ -6,12 +6,12 @@ import type { FilterValues } from "@type/core/filters";
 export function useFiltersResults<T>() {
   const [filters, setFilters] = useState<FilterValues>();
 
-  const filterdData = useCallback(
+  const filteredData = useCallback(
     (data: T) => filterData<T>(data, filters || {}),
     [filters],
   );
 
-  return { setFilters, filterdData };
+  return { setFilters, filteredData };
 }
 
 export function useFilters<T>(initalValues: T, cb: (values: T) => void) {

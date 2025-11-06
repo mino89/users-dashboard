@@ -5,7 +5,8 @@ import { useFiltersResults } from "@hooks/useFilters";
 import type { UsersList, User } from "@type/data/user";
 
 export function Index() {
-    const { setFilters, filterdData } = useFiltersResults<UsersList["users"]>();
+    const { setFilters, filteredData } =
+        useFiltersResults<UsersList["users"]>();
 
     return (
         <>
@@ -23,7 +24,7 @@ export function Index() {
                 }}
             >
                 {(data) =>
-                    filterdData(data.users).map((user: User) => (
+                    filteredData(data.users).map((user: User) => (
                         <div key={user.id}>
                             <p>
                                 {user.firstName} {user.lastName} - {user.role}
