@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
-import { useDebounce } from "./useDebounce";
-import { filterData } from "@utils/filters";
 import type { FilterValues } from "@type/core/filters";
+import { filterData } from "@utils/filters";
+import { useCallback, useState } from "react";
+import { useDebounce } from "./useDebounce";
 
 /**
  * Hook to manage filter state and provide filtered data.
