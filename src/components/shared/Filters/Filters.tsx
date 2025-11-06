@@ -1,25 +1,14 @@
-import { useState } from "react";
+import { useFilters } from "@/core/hooks/filters";
 import InputText from "../Input/InputText";
 import Select from "../Input/Select";
 import type { FiltersProps, FilterValues } from "./types";
 import { filterStartingValues } from "./utils";
 
 export default function Filters(props: FiltersProps) {
-    const { filters, onFiltersChange, resetFilters } = props;
+    const { filters, onFiltersChange } = props;
     const startingFilterValues = filterStartingValues(filters);
-    const [filterValues, setFilterValues] =
-        useState<FilterValues>(startingFilterValues);
-
-    function handleFilterUpdate(key: string, value: string) {
-        const newFilterValues = { ...filterValues, [key]: value };
-        setFilterValues(newFilterValues);
-        onFiltersChange(newFilterValues);
-    }
-
-    function handleResetFilters() {
-        setFilterValues(startingFilterValues);
-        resetFilters();
-    }
+    const { filterValues, updateFilters, resetFilters } =
+        useFilters<FilterValues>(startingFilterValues, onFiltersChange);
 
     return (
         <form>
@@ -34,7 +23,7 @@ export default function Filters(props: FiltersProps) {
                                     value={filterValues[filter.key]}
                                     options={filter.options}
                                     onChange={(value) =>
-                                        handleFilterUpdate(filter.key, value)
+                                        updateFilters(filter.key, value)
                                     }
                                 />
                             );
@@ -45,16 +34,16 @@ export default function Filters(props: FiltersProps) {
                                     ariaLabel={filter.ariaLabel}
                                     placeholder={filter.placeholder}
                                     value={filterValues[filter.key]}
-                                    onChange={(value) =>
-                                        handleFilterUpdate(filter.key, value)
-                                    }
+                                    onChange={(value) => {
+                                        updateFilters(filter.key, value, true);
+                                    }}
                                 />
                             );
                         default:
                             return null;
                     }
                 })}
-            <button type="button" onClick={handleResetFilters}>
+            <button type="button" onClick={() => resetFilters()}>
                 Reset Filters
             </button>
         </form>

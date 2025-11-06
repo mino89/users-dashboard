@@ -7,7 +7,6 @@ export type FiltersConfig = {
 export type FiltersProps = {
   filters: FiltersConfig[];
   onFiltersChange: (filters: FilterValues) => void;
-  resetFilters: () => void;
 };
 
 export type FilterValues = Record<string, string>;
