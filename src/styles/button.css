@@ -1,0 +1,17 @@
+button,
+.button {
+    background-color: var(--action);
+    color: var(--lights);
+    border-radius: var(--border-radius-full);
+    padding: calc(var(--spacing-sm) - 1px) var(--spacing-md);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: calc(var(--border-size) * 2) solid var(--action-border);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--action-hover);
+    }
+}
