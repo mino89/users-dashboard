@@ -1,5 +1,5 @@
 import type { InputTextProps } from "@type/core/input";
-
+import "./InputText.module.css";
 export default function InputText(props: InputTextProps) {
     const { value, placeholder, onChange, ariaLabel, type } = props;
     return (
