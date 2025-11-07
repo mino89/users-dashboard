@@ -7,7 +7,6 @@ export function Root() {
     return (
         <Shell header={<Header />} footer={<Footer />}>
             <Outlet />
-            <TanStackRouterDevtools position="bottom-right" />
         </Shell>
     );
 }
