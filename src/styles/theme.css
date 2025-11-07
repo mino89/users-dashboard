@@ -1,8 +1,13 @@
 :root {
 
     /* colors */
-    --background-color: #121212;
 
+    --bg-color: #d9d9d9;
+    --bg-color-secondary: #cecdcd;
+    --bg-color-tertiary: #b0aeae;
+    --text-color: #000;
+    --text-color-secondary: #333333;
+    --text-color-tertiary: #555555;
 
     /* typography */
 
@@ -10,7 +15,10 @@
     /* spacing */
     --spacing-unit: 1rem;
     --base-gap: calc(var(--spacing-unit) * 1.5);
+    --half-gap: calc(var(--spacing-unit) * 0.75);
+    --double-gap: calc(var(--spacing-unit) * 3);
 
+    --max-main-width: 1200px;
     /* layout */
     color-scheme: light dark;
 }

@@ -1,3 +1,4 @@
+import classes from "./Header.module.css";
 export default function Header() {
-    return <header>Header</header>;
+    return <header className={classes.header}>Header</header>;
 }
