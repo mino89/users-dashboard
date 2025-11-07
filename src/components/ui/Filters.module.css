@@ -4,6 +4,8 @@
     justify-content: flex-end;
     padding: var(--spacing-md) 0;
     flex-wrap: wrap;
+    position: sticky;
+    top: calc(var(--spacing-md) * -0.5);
 }
 
 @container wrapper (max-width: 600px) {
@@ -28,6 +30,9 @@
             "select button";
 
 
-
+        top: calc(var(--spacing-lg) * 1.75 + 1px);
+        z-index: 1;
+        padding: var(--half-gap);
+        margin: 0 calc(var(--spacing-md) * -1);
     }
 }
