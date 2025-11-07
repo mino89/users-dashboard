@@ -1,5 +1,5 @@
 import type { SelectProps } from "@type/core/input";
-
+import "./Select.module.css";
 export default function Select(props: SelectProps) {
     const { options, value, onChange, ariaLabel } = props;
     return (
