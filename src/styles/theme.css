@@ -1,0 +1,16 @@
+:root {
+
+    /* colors */
+    --background-color: #121212;
+
+
+    /* typography */
+
+
+    /* spacing */
+    --spacing-unit: 1rem;
+    --base-gap: calc(var(--spacing-unit) * 1.5);
+
+    /* layout */
+    color-scheme: light dark;
+}
