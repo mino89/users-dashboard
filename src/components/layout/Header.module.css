@@ -1,7 +1,32 @@
 .header {
-    background-color: var(--bg-color-secondary);
     color: var(--text-color);
     padding: var(--half-gap);
     position: sticky;
     top: 0;
+    backdrop-filter: var(--backdrop-blur);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--half-gap);
+    --logo-size: calc(var(--spacing-unit) * 1.5);
+
+    svg {
+        height: var(--logo-size);
+        width: var(--logo-size);
+        background-color: var(--logo-bg);
+        border-radius: var(--border-radius-full);
+        padding: var(--spacing-xs);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+    }
 }
