@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import type { NavigationLink } from "@type/core/navigation";
 import type React from "react";
 
 export type SectionHeadingProps = {
@@ -9,10 +10,7 @@ export type SectionHeadingProps = {
         url: string;
         alt?: string;
     };
-    link?: {
-        url: string;
-        text?: string;
-    };
+    link?: NavigationLink;
 };
 export default function SectionHeading(props: SectionHeadingProps) {
     const { title, subtitle, image, children, link } = props;
