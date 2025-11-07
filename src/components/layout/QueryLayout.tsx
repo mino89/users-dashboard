@@ -1,6 +1,6 @@
 import { useApiClient } from "@hooks/useApiClient";
 import type { QueryClientProps } from "@type/core/queryClient";
-
+import Error from "../ui/Error";
 type QueryLayoutProps<T> = {
     queryClientOptions: QueryClientProps;
     children: (data: T) => React.ReactNode;
@@ -16,7 +16,7 @@ export default function QueryLayout<T>(props: QueryLayoutProps<T>) {
     }
 
     if (isError) {
-        return <>{error?.message}</>;
+        return <Error message={error?.message || "An error occurred."} />;
     }
 
     if (data) {
