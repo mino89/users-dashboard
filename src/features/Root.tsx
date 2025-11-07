@@ -3,9 +3,9 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 export function Root() {
     return (
-        <>
+        <main className="wrapper">
             <Outlet />
             <TanStackRouterDevtools />
-        </>
+        </main>
     );
 }

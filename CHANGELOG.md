@@ -1,3 +1,22 @@
+## [0.5.0] - 2025-11-07
+
+### 🚀 Features
+
+- Implemented wrapper container
+- Wrapper in root component
+- Section heading component
+- Detail page structure implementation
+- Error template
+- Loading component
+
+### 🚜 Refactor
+
+- List accepts also array of ReactNode
+- Centralized link type
+
+### ⚙️ Miscellaneous Tasks
+
+- Format css files
 ## [0.4.0] - 2025-11-06
 
 ### 🚀 Features
