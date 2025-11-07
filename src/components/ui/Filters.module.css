@@ -1,0 +1,33 @@
+.filters {
+    display: flex;
+    gap: var(--half-gap);
+    justify-content: flex-end;
+    padding: var(--spacing-md) 0;
+    flex-wrap: wrap;
+}
+
+@container wrapper (max-width: 600px) {
+    input {
+        grid-area: input;
+    }
+
+    select {
+        grid-area: select;
+    }
+
+    button {
+        grid-area: button;
+    }
+
+    .filters {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "input input"
+            "select button";
+
+
+
+    }
+}
