@@ -1,5 +1,5 @@
 body {
-    background: var(--background-color);
+    background: var(--bg-color);
 
     >*:first-child {
 
@@ -10,6 +10,10 @@ body {
 
         main {
             flex: 1;
+            max-width: var(--max-main-width);
+            width: calc(100% - 2 * var(--half-gap));
+            margin: 0 auto;
+            padding: 0 var(--half-gap);
         }
     }
 }

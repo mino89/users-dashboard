@@ -9,7 +9,7 @@ export default function Shell(props: ShellProps) {
     return (
         <>
             {header}
-            <main>{children}</main>
+            <main className="wrapper">{children}</main>
             {footer}
         </>
     );
