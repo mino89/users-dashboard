@@ -29,3 +29,14 @@ button,
     align-items: center;
     justify-content: center;
 }
+
+.button-line {
+    background-color: transparent;
+    border: none;
+    color: var(--action);
+
+    &:hover {
+        background-color: var(--action-hover);
+        color: var(--lights);
+    }
+}
