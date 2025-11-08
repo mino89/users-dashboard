@@ -10,7 +10,6 @@ export function Detail() {
     const id = routeApi.useParams().id;
     return (
         <>
-            <h1>Detail Page {id}</h1>
             <QueryLayout<User>
                 queryClientOptions={{
                     queryKeys: ["user"],

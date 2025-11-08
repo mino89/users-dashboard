@@ -5,7 +5,8 @@
     padding: var(--spacing-md) 0;
     flex-wrap: wrap;
     position: sticky;
-    top: -.75em
+    top: -.75em;
+    z-index: 3;
 }
 
 @container wrapper (max-width: 600px) {
@@ -29,7 +30,6 @@
             "input input"
             "select button";
         top: calc(var(--spacing-lg) * 1.75);
-        z-index: 1;
         padding: var(--half-gap);
         margin: 0 calc(var(--spacing-md) * -0.75);
         backdrop-filter: var(--backdrop-blur);

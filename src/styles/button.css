@@ -2,14 +2,16 @@ button,
 .button {
     background-color: var(--action);
     border-radius: var(--border-radius-full);
-    padding: calc(var(--spacing-sm) - 1px) var(--spacing-md);
+    padding: calc(var(--spacing-md) - 1px) var(--spacing-lg);
     font-size: var(--font-size-md);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border: var(--border-size) solid var(--action-border);
+    border: calc(var(--border-size) * 2) solid var(--action-border);
     font-weight: bold;
     text-decoration: none;
     color: var(--button-color);
+    vertical-align: baseline;
+    display: inline-flex;
 
     &:hover {
         background-color: var(--action-hover);
@@ -20,12 +22,12 @@ button,
     padding: var(--spacing-sm) var(--spacing-md);
 }
 
+
 .button-rounded {
     --dimensions: calc(var(--spacing-lg) * 1.5);
     border-radius: var(--border-radius-full);
     height: var(--dimensions);
     width: var(--dimensions);
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0
@@ -33,11 +35,10 @@ button,
 
 .button-line {
     background-color: transparent;
-    border: none;
     color: var(--action);
 
     &:hover {
         background-color: var(--action-hover);
-        color: var(--lights);
+        color: light-dark(var(--lighs), var(--shadows));
     }
 }
