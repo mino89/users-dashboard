@@ -3,7 +3,7 @@
     /* colors */
 
     --bg-color: #ebebeb;
-    --bg-color-secondary: #cecdcd;
+    --bg-color-secondary: #dcdcdc;
     --bg-color-tertiary: #b0aeae;
     --text-color: #191919;
     --text-color-secondary: #333333;
@@ -39,6 +39,7 @@
     --backdrop-blur: blur(var(--spacing-unit));
     /* layout */
     --logo-bg: var(--shadows);
+    --button-color: var(--lights);
     color-scheme: light dark;
 }
 
@@ -57,7 +58,8 @@
 
         /* borders */
         --border: 1px solid var(--border-color);
-
+        /* layout */
         --logo-bg: transparent;
+        --button-color: var(--shadows);
     }
 }

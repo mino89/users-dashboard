@@ -5,8 +5,7 @@
     padding: var(--spacing-md) 0;
     flex-wrap: wrap;
     position: sticky;
-    top: calc(var(--spacing-md) * -0.25);
-
+    top: -.75em
 }
 
 @container wrapper (max-width: 600px) {
@@ -29,7 +28,7 @@
         grid-template-areas:
             "input input"
             "select button";
-        top: calc(var(--spacing-lg) * 1.75 + 1px);
+        top: calc(var(--spacing-lg) * 1.75);
         z-index: 1;
         padding: var(--half-gap);
         margin: 0 calc(var(--spacing-md) * -0.75);

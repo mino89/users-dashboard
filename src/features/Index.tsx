@@ -4,6 +4,7 @@ import List from "@components/ui/List";
 import ListItem from "@components/ui/ListItem";
 import { FILTERS_CONFIG } from "@config/filters";
 import { useFiltersResults } from "@hooks/useFilters";
+import { Link } from "@tanstack/react-router";
 import type { UsersList, User } from "@type/data/user";
 
 export function Index() {
@@ -12,7 +13,8 @@ export function Index() {
 
     return (
         <>
-            <h1>Welcome Home!</h1>
+            <h1>Users List</h1>
+            <h2>Manage and view all users</h2>
             <Filters
                 filters={FILTERS_CONFIG}
                 onFiltersChange={(values) => setFilters(values)}
@@ -34,7 +36,9 @@ export function Index() {
                                 subtitle={user.role}
                                 link={`/${user.id}`}
                             >
-                                {user.email}
+                                <Link to={`mailto:${user.email}`}>
+                                    {user.email}
+                                </Link>
                             </ListItem>
                         )}
                     </List>

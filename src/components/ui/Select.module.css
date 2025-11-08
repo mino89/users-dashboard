@@ -1,6 +1,6 @@
 select {
     border: var(--border);
-    border-radius: var(--border-radius-md);
+    border-radius: var(--border-radius-lg);
     padding: calc(var(--spacing-sm) - 1px) var(--spacing-md);
     color: var(--text-color-secondary);
 }
