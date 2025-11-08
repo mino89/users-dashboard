@@ -6,7 +6,6 @@
     backdrop-filter: var(--backdrop-blur);
     border-bottom: var(--border);
     z-index: 2;
-
 }
 
 .headerContainer {

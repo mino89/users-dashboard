@@ -1,5 +1,4 @@
 :root {
-
     /* colors */
     --bg-color: #ebebeb;
     --bg-color-secondary: #dcdcdc;
@@ -17,7 +16,7 @@
     /* spacing */
     --spacing-unit: 1rem;
     --base-gap: 1.5rem;
-    --half-gap: .75rem;
+    --half-gap: 0.75rem;
     --double-gap: 2rem;
 
     --spacing-xs: 0.25rem;
@@ -28,15 +27,15 @@
     --max-main-width: 1200px;
 
     /* borders */
-    --border-radius: .15rem;
-    --border-radius-md: .3rem;
+    --border-radius: 0.15rem;
+    --border-radius-md: 0.3rem;
     --border-radius-lg: 1rem;
     --border-radius-full: 999rem;
     --border-size: 1px;
     --border: var(--border-size) solid var(--border-color);
     /* typography */
-    --primary-font: 'Roboto Mono', 'Courier New', monospace;
-    --secondary-font: 'Roboto', 'Arial', sans-serif;
+    --primary-font: "Roboto Mono", "Courier New", monospace;
+    --secondary-font: "Roboto", "Arial", sans-serif;
     --line-height-base: 1.6;
     /* effects */
     --backdrop-blur: blur(var(--spacing-unit));
@@ -44,7 +43,6 @@
     --logo-bg: var(--shadows);
     --button-color: #ffffff;
     --anchor-color: var(--action);
-
 }
 
 @media (prefers-color-scheme: dark) {

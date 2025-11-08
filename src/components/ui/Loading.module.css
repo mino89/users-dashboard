@@ -3,9 +3,12 @@
     --size: var(--spacing-md);
     --shadow-size: 9999px;
     --radius: calc(var(--spacing-md) / 2);
-    --starting-shadow: var(--shadow-size) calc(var(--size)* 2.25) 0 calc(var(--radius) * -1) var(--color);
-    --intermediate-shadow: var(--shadow-size) calc(var(--size) / 1.675) 0 calc(var(--size) / 5) var(--color);
-    --end-shadow: var(--shadow-size) calc((var(--size)* 2.25)* -1) 0 calc(var(--radius) * -1) var(--color);
+    --starting-shadow: var(--shadow-size) calc(var(--size) * 2.25) 0
+        calc(var(--radius) * -1) var(--color);
+    --intermediate-shadow: var(--shadow-size) calc(var(--size) / 1.675) 0
+        calc(var(--size) / 5) var(--color);
+    --end-shadow: var(--shadow-size) calc((var(--size) * 2.25) * -1) 0
+        calc(var(--radius) * -1) var(--color);
     --loading-animation: loading 1.5s infinite linear;
     display: flex;
 
@@ -52,7 +55,6 @@
         animation-delay: -2.85s;
     }
 }
-
 
 @keyframes loading {
     1% {
