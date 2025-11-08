@@ -7,7 +7,7 @@
     --text-color: #191919;
     --text-color-secondary: #333333;
     --text-color-tertiary: #555555;
-    --action: #973efe;
+    --action: #623891;
     --action-border: #c68cfc;
     --action-hover: #5b21b6;
     --border-color: #e0e0e0;
@@ -40,7 +40,7 @@
     --backdrop-blur: blur(var(--spacing-unit));
     /* layout */
     --logo-bg: var(--shadows);
-    --button-color: var(--lights);
+    --button-color: #ffffff;
     --anchor-color: var(--action);
     color-scheme: light dark;
 }
@@ -61,7 +61,7 @@
         --border: 1px solid var(--border-color);
         /* layout */
         --logo-bg: transparent;
-        --button-color: #ffffff;
+
         --anchor-color: #a879fa;
     }
 }

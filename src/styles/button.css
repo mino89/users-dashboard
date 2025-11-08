@@ -39,6 +39,6 @@ button,
 
     &:hover {
         background-color: var(--action-hover);
-        color: light-dark(var(--lighs), var(--shadows));
+        color: light-dark(var(--lights), var(--shadows));
     }
 }
