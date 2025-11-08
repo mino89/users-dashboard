@@ -36,9 +36,10 @@ export function Detail() {
                                 icon: <ChevronLeft />,
                             }}
                         >
-                            <p>
-                                <Tag height={14} /> {data.role}
-                            </p>
+                            <h4>
+                                <Tag height={14} style={{ marginRight: -10 }} />{" "}
+                                {data.role}
+                            </h4>
                         </SectionHeading>
                         <List columns="large">
                             <ListItem
