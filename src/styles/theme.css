@@ -35,6 +35,8 @@
     --border-size: 1px;
     --border: var(--border-size) solid var(--border-color);
     /* typography */
+    --primary-font: 'Roboto Mono', 'Courier New', monospace;
+    --secondary-font: 'Roboto', 'Arial', sans-serif;
     --line-height-base: 1.6;
     /* effects */
     --backdrop-blur: blur(var(--spacing-unit));
@@ -42,7 +44,7 @@
     --logo-bg: var(--shadows);
     --button-color: #ffffff;
     --anchor-color: var(--action);
-    color-scheme: light dark;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,7 +63,6 @@
         --border: 1px solid var(--border-color);
         /* layout */
         --logo-bg: transparent;
-
         --anchor-color: #a879fa;
     }
 }

@@ -1,5 +1,6 @@
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
+import Unfonts from "unplugin-fonts/vite";
 import svgr from "vite-plugin-svgr";
 import path from "path";
 
@@ -7,6 +8,21 @@ import path from "path";
 export default defineConfig({
   plugins: [
     react(),
+    Unfonts({
+      google: {
+        families: [
+          {
+            name: "Roboto Mono",
+          },
+          {
+            name: "Roboto",
+            styles: "wght@200;400;500;700;900",
+          },
+        ],
+        preconnect: true,
+        display: "swap",
+      },
+    }),
     svgr({
       svgrOptions: { exportType: "default" },
       include: "**/*.svg?react",

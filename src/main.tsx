@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { router } from "@utils/router";
 import { queryClient } from "@utils/queryClient";
 import "@styles/index.css";
+import "unfonts.css";
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <QueryClientProvider client={queryClient}>
