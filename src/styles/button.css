@@ -35,7 +35,7 @@ button,
 
 .button-line {
     background-color: transparent;
-    color: var(--action);
+    color: var(--anchor-color);
 
     &:hover {
         background-color: var(--action-hover);

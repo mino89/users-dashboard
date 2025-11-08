@@ -7,8 +7,8 @@
     --text-color: #191919;
     --text-color-secondary: #333333;
     --text-color-tertiary: #555555;
-    --action: #6b1bf5;
-    --action-border: #972dfb;
+    --action: #973efe;
+    --action-border: #c68cfc;
     --action-hover: #5b21b6;
     --border-color: #e0e0e0;
     --shadows: #2a2a2a;
@@ -41,6 +41,7 @@
     /* layout */
     --logo-bg: var(--shadows);
     --button-color: var(--lights);
+    --anchor-color: var(--action);
     color-scheme: light dark;
 }
 
@@ -56,11 +57,11 @@
         --border-color: #2a2a2a;
         --shadows: #ececec;
         --lights: #2a2a2a;
-        --action: #b489ff;
         /* borders */
         --border: 1px solid var(--border-color);
         /* layout */
         --logo-bg: transparent;
-        --button-color: var(--shadows);
+        --button-color: #ffffff;
+        --anchor-color: #a879fa;
     }
 }
