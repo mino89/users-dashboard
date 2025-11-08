@@ -5,7 +5,7 @@
     padding: var(--spacing-md) 0;
     flex-wrap: wrap;
     position: sticky;
-    top: -.75em;
+    top: -.8em;
     z-index: 3;
 }
 
