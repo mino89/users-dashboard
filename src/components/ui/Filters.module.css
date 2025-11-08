@@ -1,0 +1,37 @@
+.filters {
+    display: flex;
+    gap: var(--half-gap);
+    justify-content: flex-end;
+    padding: var(--spacing-md) 0;
+    flex-wrap: wrap;
+    position: sticky;
+    top: -0.8em;
+    z-index: 3;
+}
+
+@container wrapper (max-width: 600px) {
+    input {
+        grid-area: input;
+    }
+
+    select {
+        grid-area: select;
+    }
+
+    button {
+        grid-area: button;
+    }
+
+    .filters {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "input input"
+            "select button";
+        top: calc(var(--spacing-lg) * 1.75);
+        padding: var(--half-gap);
+        margin: 0 calc(var(--spacing-md) * -0.75);
+        backdrop-filter: var(--backdrop-blur);
+    }
+}

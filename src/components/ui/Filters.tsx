@@ -3,7 +3,8 @@ import type { FiltersProps, FilterValues } from "@type/core/filters";
 import { filterStartingValues } from "@utils/filters";
 import InputText from "./InputText";
 import Select from "./Select";
-
+import { ListRestart } from "lucide-react";
+import classes from "./Filters.module.css";
 export default function Filters(props: FiltersProps) {
     const { filters, onFiltersChange } = props;
     const startingFilterValues = filterStartingValues(filters);
@@ -11,7 +12,7 @@ export default function Filters(props: FiltersProps) {
         useFilters<FilterValues>(startingFilterValues, onFiltersChange);
 
     return (
-        <form>
+        <form className={classes.filters}>
             {filters &&
                 filters.map((filter) => {
                     switch (filter.type) {
@@ -19,7 +20,8 @@ export default function Filters(props: FiltersProps) {
                             return (
                                 <Select
                                     key={filter.key}
-                                    ariaLabel={filter.ariaLabel}
+                                    id={filter.key}
+                                    aria-label={filter.ariaLabel}
                                     value={filterValues[filter.key]}
                                     options={filter.options}
                                     onChange={(value) =>
@@ -31,7 +33,8 @@ export default function Filters(props: FiltersProps) {
                             return (
                                 <InputText
                                     key={filter.key}
-                                    ariaLabel={filter.ariaLabel}
+                                    id={filter.key}
+                                    aria-label={filter.ariaLabel}
                                     placeholder={filter.placeholder}
                                     value={filterValues[filter.key]}
                                     onChange={(value) => {
@@ -43,9 +46,16 @@ export default function Filters(props: FiltersProps) {
                             return null;
                     }
                 })}
-            <button type="button" onClick={() => resetFilters()}>
-                Reset Filters
-            </button>
+            {filters.length && (
+                <button
+                    title="Reset filters"
+                    className="button-small button-rounded"
+                    type="button"
+                    onClick={() => resetFilters()}
+                >
+                    <ListRestart size={20} />
+                </button>
+            )}
         </form>
     );
 }

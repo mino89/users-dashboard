@@ -35,6 +35,7 @@ This table lists all the npm/pnpm scripts available in this project for developm
 | Command              | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | `pnpm dev`           | Start the development server using Vite                      |
+| `pnpm dev:network`   | Start the development server on the local network using Vite |
 | `pnpm build`         | Compile TypeScript and build the project for production      |
 | `pnpm preview`       | Preview the production build locally using Vite              |
 | `pnpm lint`          | Run ESLint to check code quality and style                   |

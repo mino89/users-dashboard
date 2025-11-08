@@ -9,7 +9,7 @@ export function filterStartingValues(
   filters: FiltersProps["filters"],
 ): FilterValues {
   return filters?.reduce((acc: FilterValues, filter) => {
-    acc[filter.key] = filter.value || "";
+    acc[filter.key] = String(filter.value || "");
     return acc;
   }, {});
 }

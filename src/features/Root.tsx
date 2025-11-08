@@ -1,11 +1,19 @@
+import Footer from "@components/layout/Footer";
+import Header from "@components/layout/Header";
+import Shell from "@components/layout/Shell";
 import { Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+
+import LogoComponent from "@assets/react.svg?react";
 
 export function Root() {
     return (
-        <main className="wrapper">
+        <Shell
+            header={
+                <Header logo={<LogoComponent />} heading="Users Dashboard" />
+            }
+            footer={<Footer />}
+        >
             <Outlet />
-            <TanStackRouterDevtools />
-        </main>
+        </Shell>
     );
 }

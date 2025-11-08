@@ -1,3 +1,8 @@
+import classes from "./Loading.module.css";
 export default function Loading() {
-    return <div>...Loading</div>;
+    return (
+        <div className={classes.loadingContainer}>
+            <div className={classes.loading} />
+        </div>
+    );
 }

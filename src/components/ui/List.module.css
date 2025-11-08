@@ -1,5 +1,5 @@
 .list {
-    --col-min-w: 250px;
+    --col-min-w: 300px;
     display: grid;
     gap: 16px;
 }

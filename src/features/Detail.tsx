@@ -2,15 +2,15 @@ import QueryLayout from "@components/layout/QueryLayout";
 import List from "@components/ui/List";
 import ListItem from "@components/ui/ListItem";
 import SectionHeading from "@components/ui/SectionHeading";
-import { getRouteApi } from "@tanstack/react-router";
+import { getRouteApi, Link } from "@tanstack/react-router";
 import type { User } from "@type/data/user";
+import { Building, ChevronLeft, FileUser, Phone, Tag } from "lucide-react";
 
 export function Detail() {
     const routeApi = getRouteApi("/$id");
     const id = routeApi.useParams().id;
     return (
         <>
-            <h1>Detail Page {id}</h1>
             <QueryLayout<User>
                 queryClientOptions={{
                     queryKeys: ["user"],
@@ -21,7 +21,11 @@ export function Detail() {
                     <>
                         <SectionHeading
                             title={data.firstName + " " + data.lastName}
-                            subtitle={data.email}
+                            subtitle={
+                                <Link to={`mailto:${data.email}`}>
+                                    {data.email}
+                                </Link>
+                            }
                             image={{
                                 url: data.image,
                                 alt: data.firstName + " " + data.lastName,
@@ -29,19 +33,30 @@ export function Detail() {
                             link={{
                                 url: "../",
                                 text: "Back to Users List",
+                                icon: <ChevronLeft />,
                             }}
                         >
-                            <p>Role: {data.role}</p>
+                            <h4>
+                                <Tag height={14} style={{ marginRight: -10 }} />{" "}
+                                {data.role}
+                            </h4>
                         </SectionHeading>
                         <List columns="large">
                             <ListItem
                                 title="Personal Info"
-                                subtitle={data.phone}
+                                subtitle={
+                                    <>
+                                        <Phone height={16} />
+                                        {data.phone}
+                                    </>
+                                }
+                                icon={<FileUser />}
                             >
                                 <p>Blood Group: {data.bloodGroup}</p>
                                 <p>
-                                    Address: {data.address.address},{" "}
-                                    {data.address.city}, {data.address.state},{" "}
+                                    <b>Address: </b>
+                                    {data.address.address}, {data.address.city},{" "}
+                                    {data.address.state},{" "}
                                     {data.address.postalCode},{" "}
                                     {data.address.country}
                                 </p>
@@ -49,9 +64,15 @@ export function Detail() {
                             <ListItem
                                 title="Company Info"
                                 subtitle={data.company.name}
+                                icon={<Building />}
                             >
-                                <p>Department: {data.company.department}</p>
-                                <p>Title: {data.company.title}</p>
+                                <p>
+                                    <b>Department:</b> {data.company.department}
+                                </p>
+                                <p>
+                                    <b>Title: </b>
+                                    {data.company.title}
+                                </p>
                             </ListItem>
                         </List>
                     </>
