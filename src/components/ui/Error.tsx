@@ -11,7 +11,10 @@ export default function Error(props: ErrorProps) {
     return (
         <>
             <h1>{message}</h1>
-            <Link to={link?.url || "/"}>{link?.text || "Go to Home"}</Link>
+            <br />
+            <Link className="button" to={link?.url || "/"}>
+                {link?.text || "Go to Home"}
+            </Link>
         </>
     );
 }
