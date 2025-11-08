@@ -14,7 +14,14 @@ export default function ListItem(props: ListItemProps) {
             <h3>{title}</h3>
             {subtitle && <h4>{subtitle}</h4>}
             {children}
-            {link && <Link to={link}>More Info</Link>}
+            {link && (
+                <Link
+                    className={"button button-small " + classes.action}
+                    to={link}
+                >
+                    More Info
+                </Link>
+            )}
         </article>
     );
 }
