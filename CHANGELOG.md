@@ -1,3 +1,60 @@
+## [0.6.0] - 2025-11-08
+
+### 🚀 Features
+
+- Create main template
+- Header component implementation
+- Header centered on desktop visualization
+- [**breaking**] Typography configuration
+- Added bold support
+- Loading spinner implementation
+
+### 🐛 Bug Fixes
+
+- Maximum-scale for mobile devices
+- Top filter position on desktop
+- Button hover
+- Wrong type of filter
+- Filters alignment
+- Footer padding
+- Tag position in detail role area
+
+### 🚜 Refactor
+
+- Inputs better typization and stype optimization
+
+### 🎨 Styling
+
+- Initial theme structure
+- Header spaces
+- Centered main content
+- Setup main color
+- InputText customization
+- Select customization
+- Button
+- Rounded button
+- Filters layout
+- Sticky filters
+- Configured line button
+- Fixed reset and theme logo
+- ListItem implementation
+- Fixes and adjustments
+- Palette for evince color
+- Accessible contrast ratio in layout
+- Icons in template
+- Error component
+- Footer
+
+### ⚙️ Miscellaneous Tasks
+
+- Removed tanstackrouter devtools
+- Removed useless tanstack-router dev tools dependency
+- Removed unused dependency
+- Added vite-plugin-svgr
+- Updated vite config with plugin svgr
+- Added lucide icons
+- Setup local network for mobile testing
+- Code linting
 ## [0.5.0] - 2025-11-07
 
 ### 🚀 Features
