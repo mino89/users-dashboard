@@ -4,10 +4,16 @@
     position: sticky;
     top: 0;
     backdrop-filter: var(--backdrop-blur);
+    border-bottom: var(--border);
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: var(--max-main-width);
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: var(--border);
 }
 
 .logo {
