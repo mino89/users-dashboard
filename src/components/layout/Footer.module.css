@@ -1,5 +1,5 @@
 .footer {
-    padding: var(--spacing-sm) 0;
+    padding: var(--half-gap);
     border-top: var(--border);
 }
 
