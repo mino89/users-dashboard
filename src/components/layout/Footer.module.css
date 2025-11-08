@@ -1,0 +1,9 @@
+.footer {
+    padding: var(--spacing-sm) 0;
+    border-top: var(--border);
+}
+
+.footerContainer {
+    max-width: var(--max-main-width);
+    margin: 0 auto;
+}
