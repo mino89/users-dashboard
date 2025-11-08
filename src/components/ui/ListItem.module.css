@@ -12,3 +12,9 @@
     margin-top: var(--spacing-md);
     align-self: flex-end;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    gap: var(--half-gap);
+}

@@ -4,7 +4,7 @@ import type React from "react";
 import classes from "./SectionHeading.module.css";
 export type SectionHeadingProps = {
     title: string;
-    subtitle?: string;
+    subtitle?: string | React.ReactNode;
     children?: React.ReactNode;
     image?: {
         url: string;
@@ -25,6 +25,7 @@ export default function SectionHeading(props: SectionHeadingProps) {
                     </div>
                     {link && (
                         <Link className="button button-line" to={link.url}>
+                            {link.icon}
                             {link.text || "Learn more"}
                         </Link>
                     )}

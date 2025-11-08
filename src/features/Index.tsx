@@ -5,7 +5,8 @@ import ListItem from "@components/ui/ListItem";
 import { FILTERS_CONFIG } from "@config/filters";
 import { useFiltersResults } from "@hooks/useFilters";
 import { Link } from "@tanstack/react-router";
-import type { UsersList, User } from "@type/data/user";
+import type { User, UsersList } from "@type/data/user";
+import { Tag, UserCircle } from "lucide-react";
 
 export function Index() {
     const { setFilters, filteredData } =
@@ -33,8 +34,15 @@ export function Index() {
                             <ListItem
                                 key={user.id}
                                 title={`${user.firstName} ${user.lastName}`}
-                                subtitle={user.role}
+                                subtitle={
+                                    <>
+                                        <Tag size={16} />
+                                        &nbsp;
+                                        {user.role}
+                                    </>
+                                }
                                 link={`/${user.id}`}
+                                icon={<UserCircle />}
                             >
                                 <Link to={`mailto:${user.email}`}>
                                     {user.email}
