@@ -20,7 +20,8 @@ export default function Filters(props: FiltersProps) {
                             return (
                                 <Select
                                     key={filter.key}
-                                    ariaLabel={filter.ariaLabel}
+                                    id={filter.key}
+                                    aria-label={filter.ariaLabel}
                                     value={filterValues[filter.key]}
                                     options={filter.options}
                                     onChange={(value) =>
@@ -32,7 +33,8 @@ export default function Filters(props: FiltersProps) {
                             return (
                                 <InputText
                                     key={filter.key}
-                                    ariaLabel={filter.ariaLabel}
+                                    id={filter.key}
+                                    aria-label={filter.ariaLabel}
                                     placeholder={filter.placeholder}
                                     value={filterValues[filter.key]}
                                     onChange={(value) => {

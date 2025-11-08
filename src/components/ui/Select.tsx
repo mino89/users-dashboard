@@ -1,14 +1,10 @@
 import type { SelectProps } from "@type/core/input";
 import "./Select.module.css";
 export default function Select(props: SelectProps) {
-    const { options, value, onChange, ariaLabel } = props;
+    const { onChange } = props;
     return (
-        <select
-            aria-label={ariaLabel}
-            value={value}
-            onChange={(e) => onChange?.(e.target.value)}
-        >
-            {options.map((option) => (
+        <select {...props} onChange={(e) => onChange?.(e.target.value)}>
+            {props.options.map((option) => (
                 <option key={option.value} value={option.value}>
                     {option.label}
                 </option>

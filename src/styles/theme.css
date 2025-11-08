@@ -1,7 +1,6 @@
 :root {
 
     /* colors */
-
     --bg-color: #ebebeb;
     --bg-color-secondary: #dcdcdc;
     --bg-color-tertiary: #b0aeae;
@@ -25,6 +24,7 @@
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
     --max-main-width: 1200px;
 
     /* borders */
@@ -34,7 +34,8 @@
     --border-radius-full: 999rem;
     --border-size: 1px;
     --border: var(--border-size) solid var(--border-color);
-
+    /* typography */
+    --line-height-base: 1.6;
     /* effects */
     --backdrop-blur: blur(var(--spacing-unit));
     /* layout */

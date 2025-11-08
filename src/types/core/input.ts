@@ -1,10 +1,6 @@
-export type A11yInputProps = {
-  ariaLabel: string;
-  ariaDescribedBy?: string;
-};
+import type { InputHTMLAttributes, SelectHTMLAttributes } from "react";
 
-export type InputProps = A11yInputProps & {
-  value: string;
+export type SharedInputProps = {
   onChange?: (value: string) => void;
 };
 
@@ -13,11 +9,15 @@ export type SelectOption = {
   value: string;
 };
 
-export type SelectProps = InputProps & {
-  options: SelectOption[];
-};
-
-export type InputTextProps = InputProps & {
-  placeholder?: string;
-  type?: "text" | "password" | "email" | "number";
-};
+export type SelectProps = Omit<
+  SelectHTMLAttributes<HTMLSelectElement>,
+  "onChange" | "children"
+> &
+  SharedInputProps & {
+    options: SelectOption[];
+  };
+export type InputTextProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange" | "children"
+> &
+  SharedInputProps;

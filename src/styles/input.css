@@ -1,0 +1,7 @@
+input,
+select {
+    border: var(--border);
+    border-radius: var(--border-radius-lg);
+    color: var(--text-color-secondary);
+    line-height: var(--spacing-lg);
+}
