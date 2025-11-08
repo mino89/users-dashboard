@@ -53,8 +53,9 @@ export function Detail() {
                             >
                                 <p>Blood Group: {data.bloodGroup}</p>
                                 <p>
-                                    Address: {data.address.address},{" "}
-                                    {data.address.city}, {data.address.state},{" "}
+                                    <b>Address: </b>
+                                    {data.address.address}, {data.address.city},{" "}
+                                    {data.address.state},{" "}
                                     {data.address.postalCode},{" "}
                                     {data.address.country}
                                 </p>
@@ -64,8 +65,13 @@ export function Detail() {
                                 subtitle={data.company.name}
                                 icon={<Building />}
                             >
-                                <p>Department: {data.company.department}</p>
-                                <p>Title: {data.company.title}</p>
+                                <p>
+                                    <b>Department:</b> {data.company.department}
+                                </p>
+                                <p>
+                                    <b>Title: </b>
+                                    {data.company.title}
+                                </p>
                             </ListItem>
                         </List>
                     </>
