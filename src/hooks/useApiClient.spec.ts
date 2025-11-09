@@ -97,14 +97,12 @@ describe("useApiClient", () => {
 
       const { result } = infiniteQueryHook();
 
-      // Wait for initial page to load
       await waitFor(() => {
         const infiniteResult = result.current as any;
         expect(infiniteResult.data?.pages).toHaveLength(1);
         expect(infiniteResult.hasNextPage).toBe(true);
       });
 
-      // Fetch next page
       const infiniteResult = result.current as any;
       infiniteResult.fetchNextPage();
 
@@ -120,7 +118,6 @@ describe("useApiClient", () => {
         expect(infiniteResult.hasNextPage).toBe(false);
       });
 
-      // Verify correct URLs were called
       expect(fetchMock).toHaveBeenCalledTimes(2);
       expect(fetchMock).toHaveBeenNthCalledWith(
         1,
