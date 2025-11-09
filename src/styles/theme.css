@@ -1,4 +1,5 @@
-:root {
+:root,
+.light {
     /* colors */
     --bg-color: #ebebeb;
     --bg-color-secondary: #dcdcdc;
@@ -43,10 +44,14 @@
     --logo-bg: var(--shadows);
     --button-color: #ffffff;
     --anchor-color: var(--action);
+    color: var(--text-color);
+    color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+
+    :root,
+    .dark {
         /* colors */
         --bg-color: #191919;
         --bg-color-secondary: #2a2a2a;
@@ -62,5 +67,15 @@
         /* layout */
         --logo-bg: transparent;
         --anchor-color: #a879fa;
+        color: var(--text-color);
+        color-scheme: dark;
     }
+}
+
+.light {
+    color-scheme: light !important;
+}
+
+.dark {
+    color-scheme: dark !important;
 }
