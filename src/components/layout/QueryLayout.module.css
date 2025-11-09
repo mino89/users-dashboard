@@ -1,0 +1,16 @@
+.loadMoreContainer {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+}
+
+.loadingContainer {
+    margin-top: var(--spacing-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endMessage {
+    color: var(--text-color-secondary);
+}
