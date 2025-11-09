@@ -91,3 +91,10 @@ a:not(.button) {
         text-decoration: underline;
     }
 }
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
