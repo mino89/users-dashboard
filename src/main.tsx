@@ -6,10 +6,13 @@ import { router } from "@utils/router";
 import { queryClient } from "@utils/queryClient";
 import "@styles/index.css";
 import "unfonts.css";
+import { ThemeProvider } from "@context/ThemeContext";
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <QueryClientProvider client={queryClient}>
-            <RouterProvider router={router} />
+            <ThemeProvider>
+                <RouterProvider router={router} />
+            </ThemeProvider>
         </QueryClientProvider>
     </StrictMode>,
 );
