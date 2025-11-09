@@ -5,3 +5,7 @@ select {
     color: var(--text-color-secondary);
     line-height: var(--spacing-lg);
 }
+
+*:focus {
+    outline-color: var(--action);
+}

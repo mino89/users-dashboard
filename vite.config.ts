@@ -47,6 +47,7 @@ export default defineConfig({
       "@type": path.resolve(__dirname, "./src/types"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@test": path.resolve(__dirname, "./test"),
+      "@context": path.resolve(__dirname, "./src/context"),
     },
   },
 });

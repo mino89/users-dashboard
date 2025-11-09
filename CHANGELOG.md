@@ -1,3 +1,30 @@
+## [0.7.0] - 2025-11-09
+
+### 🚀 Features
+
+- Created theme context provider
+- Created useTheme hook
+- Implemented theme switch component
+- Focus state with palette color
+
+### 🐛 Bug Fixes
+
+- Filters sticky top position
+
+### 🚜 Refactor
+
+- Theme switch component and context implementation
+- Changed style to button-line to differentiate with filters button
+
+### 📚 Documentation
+
+- Upated project structure with context informations
+
+### 🎨 Styling
+
+- Created theme classes
+- Changed theme variables structure to meet new switch  behaviour
+- Reusable ellipsis global class
 ## [0.6.0] - 2025-11-08
 
 ### 🚀 Features

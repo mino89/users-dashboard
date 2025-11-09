@@ -44,7 +44,11 @@ export function Index() {
                                 link={`/${user.id}`}
                                 icon={<UserCircle />}
                             >
-                                <Link to={`mailto:${user.email}`}>
+                                <Link
+                                    className="ellipsis"
+                                    title={user.email}
+                                    to={`mailto:${user.email}`}
+                                >
                                     {user.email}
                                 </Link>
                             </ListItem>

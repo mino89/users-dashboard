@@ -57,6 +57,7 @@ src/
 ├── hooks/             # Custom React hooks
 ├── styles/            # Global styles and CSS files
 ├── types/             # TypeScript type definitions
+├── context/           # React context providers
 ├── utils/             # Utility functions and helpers
 ├── main.tsx           # Application entry point
 ```

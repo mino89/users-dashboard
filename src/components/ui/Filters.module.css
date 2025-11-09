@@ -5,7 +5,7 @@
     padding: var(--spacing-md) 0;
     flex-wrap: wrap;
     position: sticky;
-    top: -0.8em;
+    top: calc(var(--spacing-sm) * -0.5);
     z-index: 3;
 }
 
@@ -29,7 +29,7 @@
         grid-template-areas:
             "input input"
             "select button";
-        top: calc(var(--spacing-lg) * 1.75);
+        top: calc(var(--spacing-lg) * 2);
         padding: var(--half-gap);
         margin: 0 calc(var(--spacing-md) * -0.75);
         backdrop-filter: var(--backdrop-blur);
