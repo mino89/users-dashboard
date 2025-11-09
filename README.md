@@ -93,6 +93,8 @@ export const routes: RouterConfig = {
 
 Data fetching is handled using [React Query](https://tanstack.com/query/v4). The project includes a `QueryLayout` component that simplifies data fetching for routes. You can use this component to wrap your route components and provide the necessary query configurations.
 
+#### Regular Query Example
+
 ```tsx
 <QueryLayout<User>
     queryClientOptions={{
@@ -104,6 +106,42 @@ Data fetching is handled using [React Query](https://tanstack.com/query/v4). The
     }}
 >
     {(data) => <Json obj={data} />}
+</QueryLayout>
+```
+
+#### Infinite Query Example
+
+You can also use the `QueryLayout` component to handle infinite queries. Here's an example of how to set it up:
+
+```tsx
+<QueryLayout<UsersList, User>
+    infinite
+    extractData={(response) => response.users}
+    queryClientOptions={{
+        queryKeys: ["users", "infinite"],
+        queryParams: {
+            limit: 10,
+        },
+        infinite: true,
+        initialPageParam: 0,
+        pageParamKey: "skip",
+        getNextPageParam: (lastPage: UsersList, allPages) => {
+            const totalLoaded = allPages.length * 10;
+
+            if (totalLoaded < lastPage.total) {
+                return totalLoaded;
+            }
+
+            return undefined;
+        },
+    }}
+>
+    {(allUsers, loadMoreButton) => (
+        <>
+            <Json obj={allUsers} />
+            {loadMoreButton}
+        </>
+    )}
 </QueryLayout>
 ```
 
