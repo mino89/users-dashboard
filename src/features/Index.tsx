@@ -9,9 +9,16 @@ import type { User, UsersList } from "@type/data/user";
 import { Tag, UserCircle } from "lucide-react";
 
 export function Index() {
-    const { setFilters, filteredData } =
-        useFiltersResults<UsersList["users"]>();
+    const { setFilters, filteredData } = useFiltersResults<User[]>();
+    const handlePageParamUpdate = (lastPage: UsersList, allPages: any[]) => {
+        const totalLoaded = allPages.length * 10;
 
+        if (totalLoaded < lastPage.total) {
+            return totalLoaded;
+        }
+
+        return undefined;
+    };
     return (
         <>
             <h1>Users List</h1>
@@ -20,40 +27,50 @@ export function Index() {
                 filters={FILTERS_CONFIG}
                 onFiltersChange={(values) => setFilters(values)}
             />
-            <QueryLayout<UsersList>
+            <QueryLayout<UsersList, User>
+                infinite
+                extractData={(response) => response.users}
                 queryClientOptions={{
-                    queryKeys: ["user"],
+                    queryKeys: ["users", "infinite"],
                     queryParams: {
-                        limit: 0,
+                        limit: 10,
                     },
+                    infinite: true,
+                    initialPageParam: 0,
+                    pageParamKey: "skip",
+                    getNextPageParam: (lastPage: UsersList, allPages) =>
+                        handlePageParamUpdate(lastPage, allPages),
                 }}
             >
-                {(data) => (
-                    <List<User> items={filteredData(data.users)}>
-                        {(user) => (
-                            <ListItem
-                                key={user.id}
-                                title={`${user.firstName} ${user.lastName}`}
-                                subtitle={
-                                    <>
-                                        <Tag size={16} />
-                                        &nbsp;
-                                        {user.role}
-                                    </>
-                                }
-                                link={`/${user.id}`}
-                                icon={<UserCircle />}
-                            >
-                                <Link
-                                    className="ellipsis"
-                                    title={user.email}
-                                    to={`mailto:${user.email}`}
+                {(allUsers, loadMoreButton) => (
+                    <>
+                        <List<User> items={filteredData(allUsers)}>
+                            {(user) => (
+                                <ListItem
+                                    key={user.id}
+                                    title={`${user.firstName} ${user.lastName}`}
+                                    subtitle={
+                                        <>
+                                            <Tag size={16} />
+                                            &nbsp;
+                                            {user.role}
+                                        </>
+                                    }
+                                    link={`/${user.id}`}
+                                    icon={<UserCircle />}
                                 >
-                                    {user.email}
-                                </Link>
-                            </ListItem>
-                        )}
-                    </List>
+                                    <Link
+                                        className="ellipsis"
+                                        title={user.email}
+                                        to={`mailto:${user.email}`}
+                                    >
+                                        {user.email}
+                                    </Link>
+                                </ListItem>
+                            )}
+                        </List>
+                        {loadMoreButton}
+                    </>
                 )}
             </QueryLayout>
         </>
