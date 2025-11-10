@@ -24,7 +24,6 @@ export default function ListItem(props: ListItemProps) {
             {link && (
                 <Link
                     title="Go to detail page"
-                    aria-describedby="Go to detail page"
                     className={"button button-small " + classes.listItemAction}
                     to={link}
                 >
