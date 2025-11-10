@@ -1,3 +1,5 @@
+import { vi } from "vitest";
+
 export const MOCK_DATA = {
   errors: {
     404: {
@@ -44,4 +46,34 @@ export const MOCK_DATA = {
     name: "John",
     role: "editor",
   },
+};
+
+export const mockLocalStorage = () => {
+  Object.defineProperty(window, "localStorage", {
+    value: vi.fn(() => {
+      let store: Record<string, string> = {};
+      return {
+        getItem: (key: string) => store[key] || null,
+        setItem: (key: string, value: string) => {
+          store[key] = value;
+        },
+        removeItem: (key: string) => {
+          delete store[key];
+        },
+        clear: () => {
+          store = {};
+        },
+      };
+    })(),
+  });
+};
+
+export const mockMatchMedia = () => {
+  Object.defineProperty(window, "matchMedia", {
+    writable: true,
+    value: vi.fn().mockImplementation((query) => ({
+      matches: true,
+      media: query,
+    })),
+  });
 };
