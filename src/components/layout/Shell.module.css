@@ -1,18 +1,7 @@
-body {
-    background: var(--bg-color);
-
-    > *:first-child {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        gap: var(--base-gap);
-
-        main {
-            flex: 1;
-            max-width: var(--max-main-width);
-            width: calc(100% - 2 * var(--half-gap));
-            margin: 0 auto;
-            padding: 0 var(--half-gap);
-        }
-    }
+.shellWrapper {
+    flex: 1;
+    max-width: var(--max-main-width);
+    width: calc(100% - 2 * var(--half-gap));
+    margin: 0 auto;
+    padding: 0 var(--half-gap);
 }

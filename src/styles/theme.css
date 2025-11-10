@@ -4,7 +4,6 @@
     --base-gap: 1.5rem;
     --half-gap: 0.75rem;
     --double-gap: 2rem;
-
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -47,10 +46,10 @@
     /* layout */
     --logo-bg: var(--shadows);
     --anchor-color: var(--action);
+    --input-background: #ffffff;
     color: var(--text-color);
     color-scheme: light;
 }
-
 
 .dark {
     /* colors */
@@ -70,8 +69,8 @@
     --border: 1px solid var(--border-color);
     /* layout */
     --logo-bg: transparent;
-
     --anchor-color: #a879fa;
+    --input-background: #000000;
     color: var(--text-color);
     color-scheme: dark;
 }

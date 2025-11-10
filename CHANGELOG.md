@@ -1,3 +1,41 @@
+## [1.0.0] - 2025-11-10
+
+### 🚀 Features
+
+- *(index.html)* Add missing meta description
+- *(ListItem)* Added title and proper aria attribute
+
+### 🐛 Bug Fixes
+
+- Added maximum-scale to meta viewport for a11y purposes
+- *(ShellModule)* CssModules issue with direct selection of elements caused wrong transpiling in build script
+- *(ListItem)* Wrong aria-describedby on
+- *(useFilters)* Typo in test description
+- *(ThemeContext)* MatchMedia query syntax fixed
+
+### 🚜 Refactor
+
+- Removed useless comments for code clarity
+
+### 📚 Documentation
+
+- Documented ThemeContext and Theme provider
+- Documented useTeme hook
+
+### 🎨 Styling
+
+- *(inputs)* Replaced class instead of direct selector, background-color to optimise readability
+- *(listItem)* Class names instead of direct selectors, managed styles for smaller screens
+
+### 🧪 Testing
+
+- *(theme)* Theme context test cases implementation
+- *(utils)* Implemented localStorage and matchMedia mocks
+- *(useTheme)* Removed unused dependency
+
+### ⚙️ Miscellaneous Tasks
+
+- Formatted css files
 ## [0.7.0] - 2025-11-09
 
 ### 🚀 Features

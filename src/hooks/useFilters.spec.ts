@@ -46,7 +46,7 @@ describe("useFilters hook", () => {
         });
       });
     });
-    test("should retunr filterValues correctly", async () => {
+    test("should return filterValues correctly", async () => {
       const mockCallback = vi.fn();
       const initialValues = { role: "user", status: "active" };
       const { result } = renderHook(() =>

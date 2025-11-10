@@ -1,11 +1,14 @@
 .list {
-    --col-min-w: 300px;
-    display: grid;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-gap);
 }
 
 @container wrapper (width > 600px) {
     .list {
+        --col-min-w: 300px;
+        display: grid;
+
         grid-template-columns: repeat(auto-fill, minmax(var(--col-min-w), 1fr));
     }
 }
