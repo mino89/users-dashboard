@@ -47,6 +47,7 @@
     /* layout */
     --logo-bg: var(--shadows);
     --anchor-color: var(--action);
+    --input-background: #ffffff;
     color: var(--text-color);
     color-scheme: light;
 }
@@ -70,8 +71,8 @@
     --border: 1px solid var(--border-color);
     /* layout */
     --logo-bg: transparent;
-
     --anchor-color: #a879fa;
+    --input-background: #000000;
     color: var(--text-color);
     color-scheme: dark;
 }
