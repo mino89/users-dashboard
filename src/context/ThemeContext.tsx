@@ -4,11 +4,18 @@ type ThemeContextType = {
     theme: ThemeType | undefined;
     toggleTheme: () => void;
 };
-
+/**
+ * Context to manage theme (light/dark) across the application.
+ */
 export const ThemeContext = createContext<ThemeContextType | undefined>(
     undefined,
 );
 
+/**
+ * Provider component to manage and provide theme context.
+ * @param ({ children }: { children: React.ReactNode }) the app children
+ * @returns ThemeContext.Provider
+ */
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const savedTheme = localStorage.getItem("theme") as ThemeType;
     const systemSelectedScheme = () =>
@@ -21,7 +28,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const [theme, setTheme] = useState<ThemeType>(systemSelectedScheme);
 
     useMemo(() => {
-        console.log(theme);
         const rootDocumentClasses = document.documentElement.classList;
         rootDocumentClasses.remove("light", "dark");
         rootDocumentClasses.add(theme);
