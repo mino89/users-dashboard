@@ -21,7 +21,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const systemSelectedScheme = () =>
         savedTheme
             ? savedTheme
-            : window.matchMedia("prefers-color-scheme: dark")
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
               ? "dark"
               : "light";
 
