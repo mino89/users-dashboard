@@ -1,4 +1,19 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    background: var(--bg-color);
+}
+
+
+body>*:first-child {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-gap);
+}
+
+
+.lucide,
+.lucide * {
+    box-sizing: border-box;
 }
