@@ -12,7 +12,7 @@ export default function ListItem(props: ListItemProps) {
     const { title, subtitle, children, link, icon } = props;
     return (
         <article className={classes.listItem}>
-            <header>
+            <header className={classes.listItemHeader}>
                 <>
                     {icon}
                     <h3>{title}</h3>
@@ -23,7 +23,7 @@ export default function ListItem(props: ListItemProps) {
             {children}
             {link && (
                 <Link
-                    className={"button button-small " + classes.action}
+                    className={"button button-small " + classes.listItemAction}
                     to={link}
                 >
                     More Info

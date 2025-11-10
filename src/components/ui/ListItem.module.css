@@ -6,15 +6,15 @@
     flex-direction: column;
     align-items: flex-start;
     border: var(--border);
-}
 
-.action {
-    margin-top: var(--spacing-md);
-    align-self: flex-end;
-}
+    .listItemAction {
+        margin-top: var(--spacing-md);
+        align-self: flex-end;
+    }
 
-header {
-    display: flex;
-    align-items: center;
-    gap: var(--half-gap);
+    .listItemHeader {
+        display: flex;
+        align-items: center;
+        gap: var(--half-gap);
+    }
 }
